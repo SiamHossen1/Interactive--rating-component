@@ -1,0 +1,159 @@
+:root{
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-orange: #FF8C00;
+    --clr-grey-200: hsl(217, 12%, 63%);
+    --clr-grey-400: hsl(216, 12%, 54%);
+    --clr-blue-600: hsl(213, 19%, 18%);
+    --clr-blue-800: hsl(216, 12%, 8%);
+
+    --ff-primary: 'Overpass', sans-serif;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+body{
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-regular);
+    font-size: 1rem;
+    color: var(--clr-white);
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+}
+
+.rating__card, .thankyou__card{
+    /* background: linear-gradient(90deg,var(--clr-blue-600),var(--clr-grey-400)); */
+    background: var(--clr-blue-600);
+    max-width: 400px;
+    border-radius: 1.5rem;
+    padding: 2rem;
+}
+
+.rating__icon{
+    background-color: var(--clr-grey-400);
+    padding: 0.7rem;
+    border-radius: 50%;
+}
+
+.rating__card-title{
+    padding: 1.2rem 0 0 0;
+}
+
+.rating__card-details{
+    color: rgb(219, 219, 219);
+    padding-bottom: 1.5em;
+}
+
+.rating__numbers{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+}
+
+.rating__number{
+    background-color: var(--clr-grey-400);
+    color: var(--clr-white);
+    border-radius: 50%;
+    display: inline-block;
+    font-weight: var(--fw-bold);
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    transition: all .3s ease;
+}
+
+
+@media (max-width:400px){
+    .rating__number{
+        display: inline-block;
+        width: 35px;
+        line-height: 35px;
+    }
+}
+.rating__number:hover{
+    background-color: var(--clr-orange);
+    cursor: pointer;
+}
+.rating__number:focus{
+    background-color: var(--clr-orange);
+}
+.submit__btn{
+    background-color: var(--clr-orange);
+    width: 100%;
+    border-radius: 1.5rem;
+    padding: .5rem 0;
+    color: var(--clr-white);
+    font-weight: var(--fw-bold);
+    cursor: pointer;
+}
+.submit__btn:hover{
+    background-color: var(--clr-white);
+    color: var(--clr-orange);
+}
+
+.thankyou__card-img{
+    margin: 0 auto 1.5rem;
+}
+
+
+.thankyou__card{
+    text-align: center;
+}
+
+.rating__score{
+    background-color: rgb(97, 97, 97);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    margin: 1rem 0;
+    color: var(--clr-orange);
+}
+
+.thankyou__text{
+    font-size: 1.8rem;
+    font-weight: var(--fw-bold);
+    margin-bottom: .5rem;
+}
+
+.thankyou__message{
+    color: rgb(219, 219, 219);
+}
+
+.thankyou__card{
+    display: none;
+}
+
+
